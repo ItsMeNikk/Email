@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Bomber</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Email Bomber</h1>
+    <form id="emailForm" action="sendmail.php" method="post">
+        <label for="receiver">Receiver Email:</label><br>
+        <input type="text" id="receiver" name="receiver" required><br>
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="6" required></textarea><br>
+        <label for="count">Number of Emails:</label><br>
+        <input type="number" id="count" name="count" min="1" value="1" required><br>
+        <input type="submit" value="Send Emails"><br>
+        <div id="statusBox"></div> <!-- Status box for showing sending status and log -->
+    </form>
+</div>
+<script src="script.js"></script> <!-- JavaScript file for handling form submission -->
+</body>
+</html>
